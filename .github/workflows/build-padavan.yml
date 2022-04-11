@@ -42,7 +42,7 @@ jobs:
         fi
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
-        mkdir -p /trunk/images
+        mkdir -p /trunk/images/
     - name: Build Firmware
       env:
         TNAME: PSG1208
