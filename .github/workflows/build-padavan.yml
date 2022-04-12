@@ -90,7 +90,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config #aliddns
         echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config #网易云解锁
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config #内网穿透FRPC
-        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config #Office激活
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #Office激活
         echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=n" >> .config #WIREGUARD
         echo "CONFIG_FIRMWARE_ENABLE_IPV6=n" >> .config #IPV6
         else
