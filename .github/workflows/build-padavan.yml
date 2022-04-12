@@ -31,9 +31,7 @@ jobs:
         fakeroot kmod cpio git python3-docutils gettext automake autopoint \
         texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \
         libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin  
-        ################################################################################################
-        mkdir -p /opt/rt-n56u/trunk/images/
-        ################################################################################################
+
     - name: Clone source code
       env:
         KERNEL: 3.4
@@ -50,6 +48,10 @@ jobs:
         TNAME: K2P
         KERNEL: 3.4
       run: |
+        ################################################################################################
+        mkdir -p /opt/rt-n56u/trunk/images/
+        ################################################################################################
+        
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
