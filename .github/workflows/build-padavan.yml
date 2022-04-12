@@ -135,7 +135,7 @@ jobs:
         sudo mv -f images/*.trx /opt/rt-n56u/trunk/images
         
     - name: SSH
-      uses: actions/SSH@master
+      uses: actions/checkout@master
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
