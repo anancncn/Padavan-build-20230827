@@ -34,7 +34,7 @@ jobs:
 
     - name: Clone source code
       env:
-        KERNEL: 3.4
+        KERNEL: 4.4
       run: |
         if [ $KERNEL = "4.4" ] ; then
         git clone --depth=1 https://github.com/xuyuan140/Padavan-4.4.git /opt/rt-n56u
@@ -46,7 +46,7 @@ jobs:
     - name: Build Firmware
       env:
         TNAME: K2P
-        KERNEL: 3.4
+        KERNEL: 4.4
       run: |
         ################################################################################################
         mkdir -p /opt/rt-n56u/trunk/images/
