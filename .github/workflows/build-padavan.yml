@@ -30,7 +30,10 @@ jobs:
         sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd \
         fakeroot kmod cpio git python3-docutils gettext automake autopoint \
         texinfo build-essential help2man pkg-config zlib1g-dev libgmp3-dev \
-        libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin
+        libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin  
+        ################################################################################################
+        mkdir -p /opt/rt-n56u/trunk/images/
+        ################################################################################################
     - name: Clone source code
       env:
         KERNEL: 3.4
@@ -42,7 +45,6 @@ jobs:
         fi
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
-        mkdir -p /opt/rt-n56u/trunk/images/
     - name: Build Firmware
       env:
         TNAME: K2P
@@ -134,11 +136,6 @@ jobs:
         sudo ./build_firmware_modify $TNAME 0
         sudo mv -f images/*.trx /opt/rt-n56u/trunk/images
         
-    - name: SSH
-      uses: actions/checkout@master
-      env:
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         
     - name : Upload packages
       uses: actions/upload-artifact@master
