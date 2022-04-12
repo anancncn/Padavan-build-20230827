@@ -133,6 +133,13 @@ jobs:
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
         sudo mv -f images/*.trx /opt/rt-n56u/trunk/images
+        
+    - name: SSH
+      uses: actions/SSH@master
+      env:
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        
     - name : Upload packages
       uses: actions/upload-artifact@master
       if: always()
