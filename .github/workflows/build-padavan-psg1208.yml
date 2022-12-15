@@ -2,17 +2,24 @@
 
 name: build-padavan-psg1208
 
-on: 
-  release:
-    types: [published]
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Build psg1208 Padavan"
+        required: true
+        default: "build"
+  # release:
+  #   types: [published]
   push:
     tags:
-    - 'v*'
-  #  branches: 
+      - "v*"
+  #  branches:
   #    - master
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
+  #  schedule:
+  #    - cron: 0 8 * * 5
+  #watch:
+  #  types: [started]
     types: [started]
 
 jobs:
