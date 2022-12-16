@@ -36,7 +36,7 @@ jobs:
         KERNEL: 4.4
       run: |
         if [ $KERNEL = "4.4" ] ; then
-        git clone --depth=1 https://github.com/xuyuan140/Padavan-4.4.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/xuyuan140/Padavan-KVR.git /opt/rt-n56u
         else
         git clone --depth=1 https://github.com/chongshengB/rt-n56u.git /opt/rt-n56u
         fi
@@ -89,14 +89,14 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config #DNSFORWARDER
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config #可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_DDNSTO=n" >> .config #ddnsto  ~0.5M
-        echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=n" >> .config  #阿里云盘  ~3m
+        echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=y" >> .config  #阿里云盘  ~3m
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config #aliddns
-        echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> .config #网易云解锁
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config #内网穿透FRPC
+        echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config #网易云解锁
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config #内网穿透FRPC
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> .config #Office激活
         echo "CONFIG_FIRMWARE_INCLUDE_WIREGUARD=n" >> .config #WIREGUARD
-        echo "CONFIG_FIRMWARE_ENABLE_IPV6=n" >> .config #IPV6
+        echo "CONFIG_FIRMWARE_ENABLE_IPV6=y" >> .config #IPV6
 
         else
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
