@@ -2,17 +2,24 @@
 #定位到/trunk/user/shared/defaults.h文件，进行修改,可以自定义管理员名称及密码、默认LAN地址、默认WiFi名称及密码、默认NTP服务器等设置。
 name: Build Padavan
 
-on: 
-  release:
-    types: [published]
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Build PSG1208 Padavan"
+        required: true
+        default: "true & build"
+  # release:
+  #   types: [published]
   push:
     tags:
-    - 'v*'
-  #  branches: 
+      - "v*"
+  #  branches:
   #    - master
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
+  #  schedule:
+  #    - cron: 0 8 * * 5
+  #watch:
+  #  types: [started]
     types: [started]
 
 jobs:
