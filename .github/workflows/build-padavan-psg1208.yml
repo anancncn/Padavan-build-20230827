@@ -8,7 +8,7 @@ on:
       name:
         description: "Build PSG1208 Padavan"
         required: true
-        default: "build"
+        default: "build & true"
   # release:
   #   types: [published]
   push:
