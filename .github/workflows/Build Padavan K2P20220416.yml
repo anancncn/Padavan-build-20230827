@@ -24,7 +24,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-LASTER
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
