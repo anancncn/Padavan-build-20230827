@@ -2,17 +2,24 @@
 #定位到/trunk/user/shared/defaults.h文件，进行修改,可以自定义管理员名称及密码、默认LAN地址、默认WiFi名称及密码、默认NTP服务器等设置。
 name: Build Padavan K2P20220416
 
-on: 
-  release:
-    types: [published]
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Build Padavan K2P20220416"
+        required: true
+        default: "build & true"
+  # release:
+  #   types: [published]
   push:
     tags:
-    - 'v*'
-  #  branches: 
+      - "v*"
+  #  branches:
   #    - master
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
+  #  schedule:
+  #    - cron: 0 8 * * 5
+  #watch:
+  #  types: [started]
     types: [started]
 
 jobs:
@@ -135,5 +142,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages
+        name: Padavan-packages-K2P20220416
         path: /opt/images
