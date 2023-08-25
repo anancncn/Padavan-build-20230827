@@ -1,17 +1,24 @@
 #修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
 name: Build 7620A-VPNwifi Padavan
 
-on: 
-  release:
-    types: [published]
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Build 7620A-VPNwifi Padavan"
+        required: true
+        default: "build & true"
+  # release:
+  #   types: [published]
   push:
     tags:
-    - 'v*'
-  #  branches: 
+      - "v*"
+  #  branches:
   #    - master
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
+  #  schedule:
+  #    - cron: 0 8 * * 5
+  #watch:
+  #  types: [started]
     types: [started]
 
 jobs:
