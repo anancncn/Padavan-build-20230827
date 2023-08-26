@@ -7,7 +7,7 @@ on:
       name:
         description: "Build VPNwifi Padavan"
         required: true
-        default: "build & true"
+        default: "true"
   # release:
   #   types: [published]
   push:
@@ -55,7 +55,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: NEWIFI3
+        TNAME: VPNwifi
         KERNEL: 3.4
       run: |
         cd /opt/rt-n56u/trunk
