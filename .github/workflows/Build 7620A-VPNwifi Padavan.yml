@@ -21,6 +21,9 @@ on:
   #  types: [started]
     types: [started]
 
+permissions:
+  contents: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
