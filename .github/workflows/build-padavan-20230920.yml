@@ -8,7 +8,7 @@ on:
       name:
         description: "Build Padavan MI-NANO"
         required: true
-        default: "build & true"
+        default: "true"
   # release:
   #   types: [published]
   push:
