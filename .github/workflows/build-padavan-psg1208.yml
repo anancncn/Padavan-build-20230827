@@ -114,5 +114,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-PSG1208
+        name: Padavan-packages-MI-NANO-20230920
         path: /opt/images
