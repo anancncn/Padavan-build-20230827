@@ -153,5 +153,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages
+        name: Padavan-packagess-$TNAME $(shell date +%Y%m%d%-H:%M:%S 2>/dev/null) 
         path: /opt/images
