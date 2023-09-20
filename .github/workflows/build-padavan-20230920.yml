@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Build Padavan MI-NANO"
+        description: "Build Padavan"
         required: true
-        default: "build & true"
+        default: "true"
   # release:
   #   types: [published]
   push:
