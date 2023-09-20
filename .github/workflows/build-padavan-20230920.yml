@@ -134,7 +134,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> .config #网易云解锁
         echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=y" >> .config #网易云解锁GO版本执行文件（4M多）注意固件超大小,不集成会自动下载
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
-        echo "CONFIG_FIRMWARE_ENABLE_USB=y" >> .config #usb
+        #echo "CONFIG_FIRMWARE_ENABLE_USB=y" >> .config #usb
         echo "CONFIG_FIRMWARE_INCLUDE_HID=y" >> .config #usb
         echo "CONFIG_FIRMWARE_INCLUDE_SERIAL=y" >> .config #usb
         echo "CONFIG_FIRMWARE_INCLUDE_AUDIO=y" >> .config #usb
@@ -153,5 +153,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-$TNAME-$(shell date +%Y%m%d%-H:%M:%S 2>/dev/null)
+        name: Padavan-packages
         path: /opt/images
