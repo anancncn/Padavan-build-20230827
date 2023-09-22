@@ -52,7 +52,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: HC5761A
+        TNAME: HC5861B
         KERNEL: 3.4
       run: |
         cd /opt/rt-n56u/trunk
@@ -143,5 +143,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-HC5761A-202309221018
+        name: Padavan-packages-HC5861B-202309221115
         path: /opt/images
