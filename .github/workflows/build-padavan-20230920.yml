@@ -52,7 +52,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: n14u
+        TNAME: RT-N14U
         KERNEL: 3.4
       run: |
         cd /opt/rt-n56u/trunk
@@ -143,5 +143,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-n14u-202309230940
+        name: Padavan-packages-n14u-202309261713
         path: /opt/images
