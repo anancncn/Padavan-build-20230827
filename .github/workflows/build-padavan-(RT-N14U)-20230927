@@ -1,6 +1,6 @@
 #修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
 #定位到/trunk/user/shared/defaults.h文件，进行修改,可以自定义管理员名称及密码、默认LAN地址、默认WiFi名称及密码、默认NTP服务器等设置。
-name:  build-padavan-(RT-N14U)-20230927
+name:  Build Padavan-(RT-N14U)-20230927
 
 on:
   workflow_dispatch:
