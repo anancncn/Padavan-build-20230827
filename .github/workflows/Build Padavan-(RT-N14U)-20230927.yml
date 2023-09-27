@@ -43,7 +43,7 @@ jobs:
     - name: Clone source code
         cd /opt/rt-n56u/toolchain-mipsel
         sudo ./clean_sources
-        sudo ./build_toolchain_3.0.x
+        sudo ./build_toolchain
         mkdir -p /opt/images/
         cd /opt/rt-n56u/trunk
         sudo ./clear_tree
