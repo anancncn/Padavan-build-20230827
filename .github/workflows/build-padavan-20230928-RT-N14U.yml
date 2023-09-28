@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Build Padavan"
+        description: "build-padavan-20230928-RT-N14U"
         required: true
         default: "true"
   # release:
