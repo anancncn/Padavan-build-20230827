@@ -143,5 +143,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-PSG1208-20231001
+        name: Padavan-packages-NEWIFI-MINI-20231001
         path: /opt/images
