@@ -143,5 +143,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-HC5661A-202310070947
+        name: Padavan-packages-HC5661A-202310071036
         path: /opt/images
