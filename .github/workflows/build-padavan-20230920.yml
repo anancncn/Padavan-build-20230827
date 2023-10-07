@@ -52,7 +52,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: RT-N14U
+        TNAME: HC5661A
         KERNEL: 3.4
       run: |
         cd /opt/rt-n56u/trunk
@@ -143,5 +143,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-n14u-202309261713
+        name: Padavan-packages-HC5661A-202310070947
         path: /opt/images
