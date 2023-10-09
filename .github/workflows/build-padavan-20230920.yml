@@ -144,5 +144,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages-HC5661A-202310071036
+        name: Padavan-packages-Wisiyilink-202310091331
         path: /opt/images
